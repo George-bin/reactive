@@ -1,0 +1,1099 @@
+@charset "utf-8";
+
+body,h1,h2,h3,h4,ul,li,ol,p,figure {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", "\5B8B\4F53", simsun, sans-serif ;
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+}
+ul,ol {
+	list-style: outside none none;
+}
+div,figure,figcaption,input,button {
+	box-sizing: border-box;
+}
+img {
+	display: block;
+	width: 100%;
+}
+.clearfix:after {
+	content: '.';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;   /*隐藏元素*/
+}
+.sm-visible {
+	display: none;
+}
+.none {
+	display: none;
+}
+
+
+/*头部*/
+#header {
+	width: 100%;
+	height: 70px;
+	background-color: #333;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.3); /*阴影效果*/
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+}
+#header .center {
+	max-width: 1263px;
+	height: 70px;
+	margin : 0 auto;
+}
+#header .logo {
+	width: 30%;
+	height: 70px;
+	background: url(../img/logo.png) no-repeat left center;
+	text-indent: -9999px;  /*移位*/
+	float: left;
+}
+#header .link {
+	width: 55%;
+	float: right;
+	height: 70px;
+	line-height: 70px;
+	color: #eee;
+	
+}
+#header .link li {
+	width: 20%;
+	/*width: 120px;*/
+	text-align: center;
+	float: left;
+	position:relative;
+}
+#header .link li a {
+	color: Gainsboro;
+	display: block;
+}
+#header .link li a:hover, #header .link li.active a {
+	background-color: #000;
+}
+.link ul li ul{
+	position:absolute;
+	display:none;
+} 
+.link ul li ul li{
+	line-height:40px;
+	text-align:center;
+	clear:left;
+
+}  
+.link ul li ul li a{
+	width:100%;
+	
+}  
+.link ul li ul li a:hover{
+	display: block;
+	/*background-color:none;*/
+}
+.link ul li:hover ul{
+	display:block;
+} 
+
+
+
+/*背景搜索栏*/
+#adver img {
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 70px 0 0 0;  /*是背景上方的一部分图片掉下来*/
+}
+#adver {
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;  /*父元素设置相对点*/
+}
+
+#adver .center {
+	width: 40%;      
+	height: 48px;
+	background-color: #000;
+	position: absolute; /*设置绝对定位*/
+	top: 50%;   
+	left: 50%;
+	margin: -10px 0 0 -20%;  /*减去四边多余的距离*/
+	border-radius: 10px;  /*设置圆角矩形*/
+	opacity: 0.6;  /*设置透明度*/
+}
+#adver .copy {
+	opacity: 1;
+	background-color: transparent;  /*透明色*/
+	padding: 3px 3px 0 3px;
+}
+#adver .search {
+	width: 70%;
+	height: 40px;
+	background-color: #eee;
+	border-radius: 10px;
+	border: 1px solid #666;
+	font-size: 24px;
+	color: #666;
+	outline: none;  /*点击后焦点外边框*/
+	padding: 0 10px;
+	display: block;
+	float: left;
+}
+#adver .button {
+	width: 30%;
+	height: 40px;
+	border-radius: 10px;
+	border: 1px solid #333;
+	border-left-width: 3px;
+	font-size: 24px;
+	color: #666;
+	outline: none;  /*点击后焦点外边框*/
+	cursor:pointer;
+	font-weight: bold;  /*加粗*/
+	display: block;
+	float: right;
+}
+
+/*首页*/
+#tour {   /*父元素*/
+	max-width: 1263px;
+	margin: 30px auto;
+	text-align: center;
+}
+#tour .center h2 {
+	font-size: 45px;
+	letter-spacing: 3px;  /*字体间距*/
+	color: #666;
+	margin: 10px 0;
+}
+#tour .center p {
+	color: #666;
+	margin: 10px;
+	font-size: 16px;
+}
+#tour .tour1_title {
+	height: 40px;
+	overflow: hidden;
+}
+#tour figure {
+	border: 1px solid #ddd;
+	display: block;  
+	padding: 4px;
+	margin: 15px 0.4%;
+	width: 32.4%;
+	text-align: left;
+	float: left;
+	position: relative;  /*相对定位点*/
+}
+#tour figure img {
+	vertical-align: middle;  /*解决多余空间问题*/
+}
+#tour .info {
+	padding: 5px 0 0 0;
+}
+#tour figure figcaption {
+	color: #777;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 1.5;  /*行高*/
+	padding: 7px 0 0 5px;
+}
+#tour .title {
+	color: black;
+	font-weight: normal;  /*去掉加粗*/
+}
+#tour .sat {
+	float: right;
+	font-size: 13px;
+	color: #999;
+	font-style: normal; /*去掉倾斜*/
+	position: relative;  /*使用相对定位进行调整，调整适当位置*/
+	top: 5px;
+	right: 5px;
+}
+#tour .price {
+	color: orange;
+	font-size: 14px;
+}
+#tour .price strong {
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+#tour .type {
+	width: 90px;
+	height: 25px; 
+	font-size: 14px;
+	line-height: 25px;
+	color: #fff;
+	text-align: center;  /*文本居中*/
+	background-color: #59b200;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}
+
+
+
+/*共用子页上部*/
+#headline {
+	max-width: 1920px;
+	padding: 70px 0 0 0;
+	margin: 0 auto;
+	position: relative;
+}  
+#headline hgroup {
+	position: absolute;
+	top: 45%;
+	left: 18%;    
+}
+#headline h2 {
+	color: WhiteSmoke;
+	font-size: 45px;
+	letter-spacing: 1px;
+}
+#headline h3 {
+	color: WhiteSmoke;
+	font-size: 24px;
+	letter-spacing: 1px;
+}
+#container {
+	max-width: 1263px;
+	margin: 30px auto;
+}
+#container .list {     /*中部上  次导航栏*/
+	width: 71%;
+	float: left;
+}
+#container .sidebar {
+    width: 28%;
+    float: right
+}
+#container .sidebox {
+	border: 1px solid #eee;
+	background-color: #fff;
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+#container .sidebox h2 {
+	font-size: 20px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-indent: 8px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #fafafa;
+	color: #666;
+	text-align: left;
+}
+#container .tag {
+	padding: 10px 0;
+}
+#container .tag li {
+	display: inline-block;
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	margin: 2px 0;
+	background-color: #eee;
+	text-align: left;
+	text-indent: 8px;
+}
+#container .tag a {
+	color: #999;
+	display: block;
+}
+#container .tag a:hover {
+	background-color: #458b00;
+	color: #fff;
+}
+#container .figure {
+	padding: 10px 0;
+}
+#container figure {
+	display: inline-block;
+	padding: 4px;
+	color: #666;
+}
+#container .box {
+	padding: 10px 0;
+}
+#container .box a.trea {
+	background: #eee  no-repeat 5px center;
+}
+#container .box a {
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	margin: 2px 0;
+	text-align: left;
+	text-indent: 50px;
+	color: #999;
+}
+#container .box a:hover {
+	background-color: orange;
+	color: #fff;
+}
+
+
+
+/*about*/
+.list h2 {
+	color: #666;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #ccc;figure
+    padding: 0 0 15px 0;
+    font-size: 30px;
+    font-weight: normal;
+}
+.about p {
+	line-height: 2;
+	margin: 20px 0;
+	text-indent: 40px;
+	font-size: 20px;
+}
+.about address {
+	line-height: 1.6;
+	margin: 20px 0;
+	font-style: normal;
+	font-size: 20px;
+}
+
+
+
+
+
+
+/*旅游咨询*/
+.list .tour {    /*中部 中  信息栏*/
+	width: 100%;
+	margin: 0 0 20px 0;
+	border: 1px solid #ccc;
+	position: relative;
+}
+.tour img {
+	width: 45%;
+	float: left;
+}
+.tour figcaption {
+	width: 55%;
+	float: right;
+}
+.tour hgroup {
+	width: 300px;
+}
+.tour h2 {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: left;
+    padding: 10px 0 15px 10px;
+    color: #333;
+    border: none;
+}
+.tour h3 {
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.6;
+    font-weight: normal;
+    color: #666;
+    padding: 10px 0 10px 10px;
+}
+.tour mark {
+	background-color: #fff;
+	border: 1px solid #45b800;
+	border-radius: 4px;
+	padding: 0 2px;
+	color: #45b800;
+}
+.tour ol {
+	position: absolute;
+}
+.tour li {
+	font-size: 20px;
+	float: left;
+	padding: 0 0 0 10px;
+	color: #666;
+	line-height: 1.5;
+}
+.tour .buy {
+	position: absolute;
+	top: 40px;
+	right: 30px;
+}
+.tour .price {
+	font-size: 18px;
+	color: orange;
+}
+.tour .price strong {
+	font-size: 30px;
+}
+.tour .price s {
+	font-size: 16px;
+	color: #999;
+}
+.tour .reserve a {
+	display: inline-block;
+	font-size: 18px;
+	padding: 5px 24px;
+	text-align: center;
+	color: #fff;
+	border-radius: 4px;
+	background-color: #f60;
+}
+.tour .discount {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.information .type {
+	padding: 2px 15px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;  /*文本居中*/
+	background-color: #59b200;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}
+.tour footer {
+	color: #666;
+	font-size: 18px;
+	text-align: left;
+	text-indent: 10px;
+	letter-spacing: 1px;
+	position: absolute;
+	bottom: 0;
+}
+.tour time {
+	color: #45b800;
+}
+
+
+
+/*机票预定*/
+.ticket h2 {
+	color: #666;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #ccc;
+    padding: 0 0 15px 0;
+    font-size: 30px;
+    font-weight: normal;
+}
+.ticket .types {
+	margin: 20px 0 10px 0;
+}
+.ticket .types mark {
+	color: #fff;
+	background-color: #45b800;
+	padding: 5px 8px;
+	border-radius: 4px;
+	margin: 0 10px 0 16px;
+}
+.ticket .form input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
+	padding: 5px;
+	font-size: 18px;
+	color: #666;
+	margin: 0 0 0 16px;
+}
+.ticket .left {
+	width: 43%;
+    display: inline-block;
+}
+.ticket .right {
+	width: 43%;
+	display: inline-block;
+}
+.ticket .button {
+	width: 9%;
+	display: inline-block;
+}
+.ticket .submit {
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+	font-size: 20px;
+	text-align: center;
+	color: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: #f60;
+	position: relative;
+	top: -28px;
+}
+.ticket .form p {
+	line-height: 3;
+	font-size: 20px;
+}
+.ticket .new {
+	margin: 20px 0 0 0;
+}
+#container .ticket .new ul {
+    margin: 20px 0 0 0;
+}
+.ticket .new li {
+	display: inline-block;
+	padding: 5px 10px;
+}
+.ticket .new li:first-child {
+	padding-left: 0;
+}
+.ticket .new li:nth-child(2) {    /*选择第二个伪类*/
+    background-color: #45b800;
+    border-radius: 4px;
+    color: #fff;
+}
+.ticket table {
+	margin: 20px 0 0 0;
+	width: 100%;
+	border: 1px solid #ddd;
+	border-collapse: collapse;   /*去掉填充，即去掉多条边框，只显示一条*/
+}
+.ticket table th {
+	height: 50px;
+	line-height: 50px;
+	background-color: #999;
+	color: #fff;
+	border-bottom: 1px solid #ddd;   /*只显示底边框*/
+}
+.ticket table td {
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #ddd;    /*只显示底边框*/
+	text-align: center;
+}
+.ticket table tr:nth-child(2n) {   /*更好的显示界面*/
+	background-color: #fafafa;
+}
+.ticket table tr:hover {  /*鼠标选定时的样式*/
+	background-color: #eee;
+}
+.ticket .price {
+	color: orange;
+}
+.ticket .more {
+	color: #666;
+}
+.ticket .reserve {
+	display: inline-block;
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 20px;
+	text-align: center;
+	color: #fff;
+	border-radius: 4px;
+	background-color: #f60;
+}
+
+
+
+
+
+
+/*风景欣赏*/
+.list figure {
+	border: 1px solid #ddd;
+	padding: 4px;
+	margin: 15px 5px 15px 0;
+	display: block;
+	width: 32.6%;
+	float: left;
+}
+.list figcaption {
+	text-align: center;
+	padding: 5px 0;
+	font-size: 20px;
+}
+.list .more {
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background-color: #fafafa;
+	border-radius: 10px;
+	cursor: pointer;   /*手型点击*/
+	font-size: 18px;
+	color: #666;
+}
+
+
+
+/*底部*/
+#footer {
+	background-color: #222;
+	clear: both;
+	position: relative;  /*在使用清理浮动的情况下，利用相对定位，调整位置*/
+	top: 20px;
+}
+#footer .top {
+	max-width: 1263px;
+	height: 280px;
+	margin: 0 auto;
+	text-align: center;
+}
+#footer .block {
+	width: 33.33%;
+	height: 280px;
+	display: inline-block;
+	text-align: left;
+	color: #ccc;
+	vertical-align: top;  /*垂直据顶*/
+	display: block;
+	float: left;
+}
+#footer h2 {
+	font-size: 24px;
+	font-weight: normal;
+	padding: 20px 0 0 20px;
+}
+#footer hr {
+	width: 88%;
+	border: 1px solid #333;
+}
+#footer ul {
+	font-size: 18px;
+	color: #777;
+	line-height: 2;
+	text-indent: 20px;  /*首行缩进*/
+}
+#footer .version {
+	color: #777;
+	text-align: center;
+	padding: 5px 0;
+}
+#footer .bottom {
+	padding: 15px 0;
+	color: #777;
+	background-color: #000;
+	text-align: center;
+	border-top: 1px solid #444;
+}
+
+
+
+/*媒体查询*/
+/*当页面大于1200px时，大屏幕，主要是pc端*/
+@media (min-width: 1200px) {
+    .tour hgroup {
+    	width: 70%;
+    }
+}
+
+/*在992和1199像素之间，中等屏幕，分辩论低的网页  pc*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    #adver .center {
+		width: 50%;      
+		/*margin: -10px 0 0 -25%;*/  /*减去四边多余的距离*/
+    }
+    #tour .center h2 {
+	    font-size: 40px;
+    }
+    #headline hgroup {
+    	left: 8%;
+    }
+    #headline h2 {
+		font-size: 36px;
+	}
+	#headline h3 {
+		font-size: 20px;
+	}
+	.sidebar {
+		display: none;
+	}
+	#container .list {
+		width: 100%;
+		padding: 0 20px;
+	}
+
+	.tour h2 {
+	    font-size: 24px;
+	}
+	.tour hgroup {
+		width: 330px;
+	}
+    .tour h3, .tour .price s {
+	    font-size: 18px;
+	}
+	.tour ol {
+		margin: 20px 0 0 0;
+	}
+	.tour li {
+		font-size: 20px;
+	}
+	.tour .price {
+		font-size: 18px;
+	}
+	.tour .price strong {
+		font-size: 25px;
+	}
+	.tour footer {
+		font-size: 16px;
+	}
+	.information .type {
+		font-size: 14px;
+	}
+	.information .buy {
+		right: 18px;
+	}
+	.tour .reserve a {
+		font-size: 20px;
+		padding: 5px 24px;
+	}
+	.tour .discount {
+		font-size: 13px;
+	}
+}
+
+/*在768和991像素之间的屏幕，小屏幕，主要是PAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+    #adver .center {
+		width: 60%;       
+		margin: -10px 0 0 -30%;  /*减去四边多余的距离*/
+    }
+    #adver .search, #adver .button {
+    	font-size: 20px;
+    }
+    #tour .center h2 {
+	    font-size: 35px;
+    }
+    #headline hgroup {
+    	left: 8%;
+    }
+    #headline h2 {
+		font-size: 30px;
+	}
+	#headline h3 {
+		font-size: 16px;
+	}
+	.sidebar {
+		display: none;
+	}
+	#container .list {
+		width: 100%;
+		padding: 0 20px;
+	}
+	.list h2 {
+	    font-size: 28px;
+	}
+	.about p, .about address {
+        font-size: 18px;
+	}
+	.list .form input {
+		width: 98%;
+		height: 35px;
+		margin: 0;
+	}
+	.ticket .left, .ticket .right, .ticket .button {
+		width: 98%;
+	    display: block;
+	}
+	.ticket .form p {
+		line-height: 2;
+	}
+	.ticket .submit {
+		display: block;
+		width: 30%;
+		height: auto;
+		line-height: 2;
+		position: relative;
+		top: 10px;
+		margin: 0 auto;
+	}
+
+
+	.tour h2 {
+	    font-size: 23px;
+	}
+    .tour h3, .tour .price s {
+	    font-size: 16px;
+	    line-height: 2;
+	}
+	.tour hgroup {
+		width: 67%;
+	}
+	.tour ol {
+		bottom: 0;
+		line-height: 2.5;
+	}
+	.tour li {
+		font-size: 20px;
+	}
+	.tour .price {
+		font-size: 18px;
+	}
+	.tour .price strong {
+		font-size: 25px;
+	}
+	.tour footer {
+		display: none;
+	}
+	.information .type {
+		font-size: 14px;
+	}
+	.information .buy {
+		right: 18px;
+	}
+	.tour .reserve a {
+		font-size: 16px;
+		padding: 5px 24px;
+	}
+	.tour .discount {
+		font-size: 13px;
+	}
+}
+
+/*在480和767像素之间，超小屏幕，主要是手机*/
+@media (min-width: 480px) and (max-width: 767px) {
+	#header,#header .center,#header .link {
+	   height: 45px;
+	}
+    #header .logo, .sm-hidden, .sidebar {
+	   display: none;
+	}
+	#header .link {
+	   width: 100%;
+	   line-height: 45px;
+	}
+	#adver img {
+		padding: 45px 0 0 0;
+	}
+	#adver .center {
+		width: 70%;   
+		height: 53px;   
+		margin: -10px 0 0 -35%;  /*减去四边多余的距离*/
+    }
+    #adver .search, #adver .button {
+    	height: 45px;
+    	font-size: 18px;
+    }
+    .sm-visible {
+    	display: block;
+    }
+    #tour .center h2 {
+	    font-size: 30px;
+    }
+    #tour .center p {
+	    font-size: 15px;
+    }
+    #tour figure {
+    	width: 49.2%;
+    }
+    #headline hgroup {
+    	left: 8%;
+    }
+    #headline {
+    	padding: 45px 0 0 0;
+    }
+    #headline h2 {
+		font-size: 26px;
+	}
+	#headline h3 {
+		font-size: 14px;
+	}
+	#container .list {
+		width: 100%;
+		padding: 0 20px;
+	}
+	.list h2 {
+	    font-size: 25px;
+	}
+	.about p, .about address {
+         font-size: 15px;
+	}
+	.list figure {
+		width: 48.2%;
+	}
+	.list figcaption {
+		font-size: 18px;
+	}
+	.list .form input {
+		width: 98%;
+		height: 35px;
+		margin: 0;
+	}
+	.ticket .left, .ticket .right, .ticket .button {
+		width: 98%;
+	    display: block;
+	}
+	.ticket .form p {
+		line-height: 2;
+	}
+	.ticket .submit {
+		display: block;
+		width: 30%;
+		height: auto;
+		line-height: 2;
+		position: relative;
+		top: 10px;
+		margin: 0 auto;
+	}
+	.ticket .type, .ticket form, .ticket.new, .list .form input, .ticket .submit, .ticket .reserve {
+		font-size: 16px;
+	}
+
+
+	.tour h2 {
+	    font-size: 24px;
+	}
+    .tour .price s {
+	    font-size: 13px;
+	}
+	.tour h3 {
+		bottom: 0;
+		width: 90%;
+	}
+	.tour .price {
+		font-size: 12px;
+	}
+	.tour .price strong {
+		font-size: 20px;
+	}
+	.tour .buy {
+		top: 10px;
+		right: 10px;
+	}
+	.tour footer, .tour .discount, .tour ol {
+		display: none;
+	}
+	.information .type {
+		font-size: 12px;
+	}
+	.tour .reserve a {
+		font-size: 14px;
+		padding: 5px 24px;
+	}
+
+}
+
+/*小于480像素，微小屏幕，更低分辩率的手机*/
+@media (max-width: 480px) {
+	#header,#header .center,#header .link {
+	   height: 45px;
+	}
+	#header .logo, .xs-hidden, .sm-hidden, .sidebar {    /*当小于480px时隐藏*/
+	   display: none;
+	}
+	#header .link {
+	   width: 100%;
+	   line-height: 45px;
+	}
+	#header .link li {
+		width: 25%;
+	}
+	#adver img {
+		padding: 45px 0 0 0;
+	}
+	#adver .center {
+		width: 80%;    
+		height: 48px;  
+		margin: -10px 0 0 -40%;  /*减去四边多余的距离*/
+    }
+    #adver .search, #adver .button {
+    	height: 40px;
+    	font-size: 16px;
+    }
+    .sm-visible {
+    	display: block;
+    }
+    #footer .bottom, #footer .version {
+    	font-size: 13px;
+    }
+    #tour .center h2 {
+	    font-size: 26px;
+    }
+    #tour .center p {
+	    font-size: 14px;
+    }
+    #tour figure {
+    	width: 99.2%;
+    }
+    #headline hgroup {
+    	left: 8%;
+    }
+    #headline {
+    	padding: 45px 0 0 0;
+    }
+    #headline h2 {
+		font-size: 20px;
+	}
+	#headline h3 {
+		font-size: 12px;
+	}
+	#container .list {
+		width: 100%;
+		padding: 0 20px;
+	}
+	.list h2 {
+	    font-size: 20px;
+	}
+	.about p, .about address {
+         font-size: 14px;
+	}
+	.list figure {
+		width: 99%;
+	}
+	.list figcaption {
+		font-size: 16px;
+	}
+	.list .form input {
+		width: 98%;
+		height: 35px;
+		margin: 0;
+	}
+	.ticket .left, .ticket .right, .ticket .button {
+		width: 98%;
+	    display: block;
+	}
+	.ticket .form p {
+		line-height: 2;
+	}
+	.ticket .submit {
+		display: block;
+		width: 30%;
+		height: auto;
+		line-height: 2;
+		position: relative;
+		top: 10px;
+		margin: 0 auto;
+	}
+	.ticket .type, .ticket form, .ticket .new, .list .form input, .ticket .submit, .ticket .reserve {
+		font-size: 14px;
+	}
+	.ticket .reserve {
+		display: inline-block;
+		width: auto;
+		height: auto;
+		padding: 8px;
+		line-height: 1;
+	}
+	.tour img {
+		width: 100%;
+	}
+	.tour figcaption {
+		width: 100%;
+	}
+	.tour h3, .tour ol, .tour .buy, .tour .type, .tour footer, .tour .discount {
+	    display: none;
+	}
+	.tour h2 {
+		padding: 0;
+		margin: 0;
+	}
+}
